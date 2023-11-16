@@ -1,4 +1,7 @@
 # Editor configuration, see https://editorconfig.org
+
+# Configura como seran los archivos. Configuraciones del editor de codigo. Para que tenga un estilo especifico el editor
+
 root = true
 
 [*]
