@@ -48,3 +48,13 @@ export class AppModule { }
 //Para desplegar metodo de produccion:
 //ng build o npm run build
 //una de ellas es con Angular Cli directamente, la otra es con el Cli, pero usando directamente la propiedad que aparece en package.json
+
+//Repositorio nuevo o actualizar el que habia con add ., cambiando nombre de commit, y push .
+//En VSCode /bases sacarlo de /dist y ponerlo en carpeta principal. Cambiar nombre por docs
+//En repositorio de github, Settings-Pages- deploy from branch.
+//Poner en branch, main, y poner opcion /docs
+//Cuando pulsamos link despues de deploy dara error, porque archivos estan en otra carpeta.
+//Para arreglarlo:
+//en /docs/index.html, cambiar <base href="/"> y poner un . antes de /
+//<base href="./">
+//Despues volver a actulizar repositorio de github
