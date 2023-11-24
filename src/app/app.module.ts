@@ -58,3 +58,25 @@ export class AppModule { }
 //en /docs/index.html, cambiar <base href="/"> y poner un . antes de /
 //<base href="./">
 //Despues volver a actulizar repositorio de github
+
+//Para hacerlo de forma automatica, ir a package.json y poner un script nuevo
+//"build:href": "ng build --base-href ./"
+//Asi se cambia automaticamente el href de docs/index.html
+//escribimos npm run build:href, y crea un nuevo /dist
+
+//despues necesitamos volver a actualizar el repositorio, eliminar /docs, y la nueva /dist/bases cambiarla de lugar, llamarla /docs...
+
+//De forma automatizada, usar del-cli:
+//npm install --global (opcional) del-cli --save-dev, y se instala como desarrollo
+//en package.json poner un nuevo script:
+//"delete:docs": "del docs"
+
+//Copyfiles:
+//npm i copyfiles --save-dev, y se ejecuta en terminal
+//en package.json: "copy:dist": "copyfiles dist/bases/* ./docs -f"
+//Copiara todo lo que hay en dist/bases en una carpeta nueva llamada docs. F de flat, para que no grabe dist/bases tal cual en /docs
+//terminal npm run copy:dist
+
+//Podemos combinar todos esos distintos comandos en uno:
+//package.json:
+//"build:github": "npm run delete:docs && npm run build:href && npm run copy:dist"
